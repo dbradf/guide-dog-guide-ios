@@ -15,6 +15,7 @@
 		5D7AAF4B1E2A91B300E089E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D7AAF491E2A91B300E089E8 /* LaunchScreen.storyboard */; };
 		5D7AAF561E2A91B300E089E8 /* Guide_Dog_GuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AAF551E2A91B300E089E8 /* Guide_Dog_GuideTests.swift */; };
 		5D7AAF611E2A91B300E089E8 /* Guide_Dog_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AAF601E2A91B300E089E8 /* Guide_Dog_GuideUITests.swift */; };
+		5D7AAF6F1E2AFECF00E089E8 /* Markdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AAF6E1E2AFECF00E089E8 /* Markdown.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		5D7AAF5C1E2A91B300E089E8 /* Guide Dog GuideUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Guide Dog GuideUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D7AAF601E2A91B300E089E8 /* Guide_Dog_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guide_Dog_GuideUITests.swift; sourceTree = "<group>"; };
 		5D7AAF621E2A91B300E089E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D7AAF6E1E2AFECF00E089E8 /* Markdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Markdown.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				5D7AAF471E2A91B300E089E8 /* Assets.xcassets */,
 				5D7AAF491E2A91B300E089E8 /* LaunchScreen.storyboard */,
 				5D7AAF4C1E2A91B300E089E8 /* Info.plist */,
+				5D7AAF6E1E2AFECF00E089E8 /* Markdown.swift */,
 			);
 			path = "Guide Dog Guide";
 			sourceTree = "<group>";
@@ -196,6 +199,7 @@
 				TargetAttributes = {
 					5D7AAF3A1E2A91B300E089E8 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 6F3LUQ45KT;
 						ProvisioningStyle = Automatic;
 					};
 					5D7AAF501E2A91B300E089E8 = {
@@ -262,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D7AAF6F1E2AFECF00E089E8 /* Markdown.swift in Sources */,
 				5D7AAF431E2A91B300E089E8 /* DetailViewController.swift in Sources */,
 				5D7AAF411E2A91B300E089E8 /* MasterViewController.swift in Sources */,
 				5D7AAF3F1E2A91B300E089E8 /* AppDelegate.swift in Sources */,
@@ -416,6 +421,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6F3LUQ45KT;
 				INFOPLIST_FILE = "Guide Dog Guide/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbradf.Guide-Dog-Guide";
@@ -428,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6F3LUQ45KT;
 				INFOPLIST_FILE = "Guide Dog Guide/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.dbradf.Guide-Dog-Guide";
@@ -509,6 +516,7 @@
 				5D7AAF671E2A91B300E089E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D7AAF681E2A91B300E089E8 /* Build configuration list for PBXNativeTarget "Guide Dog GuideTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +525,7 @@
 				5D7AAF6A1E2A91B300E089E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5D7AAF6B1E2A91B300E089E8 /* Build configuration list for PBXNativeTarget "Guide Dog GuideUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +534,7 @@
 				5D7AAF6D1E2A91B300E089E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,16 +8,19 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, UIWebViewDelegate {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
+    @IBOutlet weak var webview: UIWebView!
 
+    let htmlPrefix = "<html><head><meta name=\"viewport\" content=\"width=device-width\"></head><body>\n"
+    let htmlSuffix = "</body></html>"
 
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let label = self.detailDescriptionLabel {
-                label.text = detail.description
+            if let webview = self.webview {
+                webview.loadHTMLString(htmlPrefix + detail + htmlSuffix, baseURL: nil)
             }
         }
     }
@@ -33,13 +36,20 @@ class DetailViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    var detailItem: NSDate? {
+    var detailItem: String? {
         didSet {
             // Update the view.
             self.configureView()
         }
     }
 
-
+    func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
+        if (navigationType == UIWebViewNavigationType.linkClicked) {
+            UIApplication.shared.open(request.url!)
+            return false
+        }
+        
+        return true
+    }
 }
 
