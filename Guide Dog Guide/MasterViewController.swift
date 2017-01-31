@@ -51,6 +51,7 @@ class MasterViewController: UITableViewController {
             (data, response, err) in
             DispatchQueue.main.async {
                 self.documents[index] = markdownEngine.transform(String(data: data!, encoding: String.Encoding.utf8) as String!)
+                
             }
             }.resume()
     }

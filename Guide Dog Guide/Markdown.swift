@@ -1036,7 +1036,18 @@ public struct Markdown {
     fileprivate func atxHeaderEvaluator(_ match: Match) -> String {
         let header = match.valueOfGroupAtIndex(2)
         let level = match.valueOfGroupAtIndex(1).length
-        return "<h\(level)>\(runSpanGamut(header as String))</h\(level)>\n\n"
+        let aTag = replaceRegex(replaceRegex(header as String, "\\W+", " "), "\\s+", "-").lowercased()
+        
+        return "<h\(level)>\(runSpanGamut(header as String))</h\(level)><a name=\"\(aTag)\"></a>\n\n"
+    }
+    
+    fileprivate func replaceRegex(_ string: String, _ regex: String, _ replace: String) -> String {
+        var str = ""
+        do {
+            let whitespaceRegex = try NSRegularExpression(pattern: regex)
+            str = whitespaceRegex.stringByReplacingMatches(in: string, options: [], range: NSMakeRange(0, string.characters.count), withTemplate: replace)
+        } catch {}
+        return str
     }
     
     fileprivate static let _horizontalRules = Regex([
