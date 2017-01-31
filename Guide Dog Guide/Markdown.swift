@@ -1036,9 +1036,10 @@ public struct Markdown {
     fileprivate func atxHeaderEvaluator(_ match: Match) -> String {
         let header = match.valueOfGroupAtIndex(2)
         let level = match.valueOfGroupAtIndex(1).length
-        let aTag = replaceRegex(replaceRegex(header as String, "\\W+", " "), "\\s+", "-").lowercased()
+        let wordsOnly = replaceRegex(header as String, "\\W+", " ").trimmingCharacters(in: CharacterSet.whitespacesAndNewlines)
+        let aTag = replaceRegex(wordsOnly, "\\s+", "-").lowercased()
         
-        return "<h\(level)>\(runSpanGamut(header as String))</h\(level)><a name=\"\(aTag)\"></a>\n\n"
+        return "<a name=\"\(aTag)\"></a><h\(level)>\(runSpanGamut(header as String))</h\(level)>\n\n"
     }
     
     fileprivate func replaceRegex(_ string: String, _ regex: String, _ replace: String) -> String {

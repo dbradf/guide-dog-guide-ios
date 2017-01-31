@@ -45,8 +45,16 @@ class DetailViewController: UIViewController, UIWebViewDelegate {
 
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         if (navigationType == UIWebViewNavigationType.linkClicked) {
-            UIApplication.shared.open(request.url!)
-            return false
+            
+            let url = request.url!
+            if let scheme = url.scheme {
+                if scheme == "applewebdata" {
+                    return true
+                }
+                UIApplication.shared.open(url)
+                return false
+            }
+            return true
         }
         
         return true
