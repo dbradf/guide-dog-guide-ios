@@ -16,6 +16,7 @@
 		5D7AAF561E2A91B300E089E8 /* Guide_Dog_GuideTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AAF551E2A91B300E089E8 /* Guide_Dog_GuideTests.swift */; };
 		5D7AAF611E2A91B300E089E8 /* Guide_Dog_GuideUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AAF601E2A91B300E089E8 /* Guide_Dog_GuideUITests.swift */; };
 		5D7AAF6F1E2AFECF00E089E8 /* Markdown.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D7AAF6E1E2AFECF00E089E8 /* Markdown.swift */; };
+		5DA0F8A81E42C33F0031A0B4 /* ArticleCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DA0F8A71E42C33F0031A0B4 /* ArticleCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5D7AAF601E2A91B300E089E8 /* Guide_Dog_GuideUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guide_Dog_GuideUITests.swift; sourceTree = "<group>"; };
 		5D7AAF621E2A91B300E089E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5D7AAF6E1E2AFECF00E089E8 /* Markdown.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Markdown.swift; sourceTree = "<group>"; };
+		5DA0F8A71E42C33F0031A0B4 /* ArticleCache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleCache.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				5D7AAF3E1E2A91B300E089E8 /* AppDelegate.swift */,
 				5D7AAF401E2A91B300E089E8 /* MasterViewController.swift */,
 				5D7AAF421E2A91B300E089E8 /* DetailViewController.swift */,
+				5DA0F8A71E42C33F0031A0B4 /* ArticleCache.swift */,
 				5D7AAF441E2A91B300E089E8 /* Main.storyboard */,
 				5D7AAF471E2A91B300E089E8 /* Assets.xcassets */,
 				5D7AAF491E2A91B300E089E8 /* LaunchScreen.storyboard */,
@@ -268,6 +271,7 @@
 			files = (
 				5D7AAF6F1E2AFECF00E089E8 /* Markdown.swift in Sources */,
 				5D7AAF431E2A91B300E089E8 /* DetailViewController.swift in Sources */,
+				5DA0F8A81E42C33F0031A0B4 /* ArticleCache.swift in Sources */,
 				5D7AAF411E2A91B300E089E8 /* MasterViewController.swift in Sources */,
 				5D7AAF3F1E2A91B300E089E8 /* AppDelegate.swift in Sources */,
 			);
