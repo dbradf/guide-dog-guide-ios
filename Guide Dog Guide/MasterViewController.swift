@@ -10,16 +10,29 @@ import UIKit
 
 class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
-    var articleCache: ArticleCache? = nil
+    private var articleCache: ArticleCache? = nil
+    let uiRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        articleCache = ArticleCache(self.tableView.reloadData)
+        articleCache = ArticleCache(self.finishRefresh)
+        self.tableView.refreshControl = self.uiRefreshControl
+        self.uiRefreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
 
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
         }
+    }
+    
+    func finishRefresh() {
+        self.tableView.reloadData()
+        self.uiRefreshControl.endRefreshing()
+    }
+    
+    func refreshData() {
+        self.articleCache?.refresh(force: true)
+//        self.uiRefreshControl.endRefreshing()
     }
 
     override func viewWillAppear(_ animated: Bool) {
