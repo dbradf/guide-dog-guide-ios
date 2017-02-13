@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -38,34 +37,22 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifZ-HD-RxV">
-                                <rect key="frame" x="0.0" y="64" width="768" height="968"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifZ-HD-RxV">
+                                <rect key="frame" x="0.0" y="64" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
-                                    <webView contentMode="scaleToFill" misplaced="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="byJ-qx-aOq">
+                                    <webView contentMode="scaleToFill" fixedFrame="YES" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="byJ-qx-aOq">
                                         <rect key="frame" x="0.0" y="-64" width="768" height="968"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <outlet property="delegate" destination="JEX-9P-axG" id="wky-ff-C6a"/>
                                         </connections>
                                     </webView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="byJ-qx-aOq" firstAttribute="centerY" secondItem="ifZ-HD-RxV" secondAttribute="centerY" id="2H8-Xq-clZ"/>
-                                    <constraint firstItem="byJ-qx-aOq" firstAttribute="centerX" secondItem="ifZ-HD-RxV" secondAttribute="centerX" id="6bD-s4-24q"/>
-                                    <constraint firstItem="byJ-qx-aOq" firstAttribute="top" secondItem="ifZ-HD-RxV" secondAttribute="top" id="EmA-Jl-wTh"/>
-                                    <constraint firstAttribute="bottom" secondItem="byJ-qx-aOq" secondAttribute="bottom" id="aK8-X5-4QQ"/>
-                                    <constraint firstAttribute="trailing" secondItem="byJ-qx-aOq" secondAttribute="trailing" id="eUl-5L-VWm"/>
-                                    <constraint firstItem="byJ-qx-aOq" firstAttribute="leading" secondItem="ifZ-HD-RxV" secondAttribute="leading" id="i9f-Xv-XK9"/>
-                                </constraints>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="ifZ-HD-RxV" secondAttribute="trailing" id="LZd-nr-0C0"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="ifZ-HD-RxV" secondAttribute="bottom" constant="-8" id="eIg-j3-6nL"/>
-                            <constraint firstItem="ifZ-HD-RxV" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="r4l-Z9-HTi"/>
-                            <constraint firstItem="ifZ-HD-RxV" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="w3t-Zm-FpG"/>
-                        </constraints>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
@@ -75,7 +62,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="708" y="128.18590704647679"/>
+            <point key="canvasLocation" x="707.8125" y="127.73437499999999"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
