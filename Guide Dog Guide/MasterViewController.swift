@@ -18,10 +18,18 @@ class MasterViewController: UITableViewController {
         articleCache = ArticleCache(self.finishRefresh)
         self.tableView.refreshControl = self.uiRefreshControl
         self.uiRefreshControl.addTarget(self, action: #selector(self.refreshData), for: .valueChanged)
+        
 
         if let split = self.splitViewController {
             let controllers = split.viewControllers
             self.detailViewController = (controllers[controllers.count-1] as! UINavigationController).topViewController as? DetailViewController
+        }
+        
+        if UIDevice.current.userInterfaceIdiom == .pad {
+            let startIndex = IndexPath(row: 0, section: 0)
+            self.tableView.selectRow(at: startIndex, animated: true, scrollPosition: UITableViewScrollPosition.none)
+            
+            self.performSegue(withIdentifier: "showDetail", sender: startIndex)
         }
     }
     
@@ -32,7 +40,6 @@ class MasterViewController: UITableViewController {
     
     func refreshData() {
         self.articleCache?.refresh(force: true)
-//        self.uiRefreshControl.endRefreshing()
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -53,7 +60,9 @@ class MasterViewController: UITableViewController {
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = "Loading..."
                 if let cache = self.articleCache {
-                    controller.detailItem = cache.documents[indexPath.row]
+                    let row = indexPath.row
+                    controller.detailItem = cache.documents[row]
+                    controller.navigationItem.title = cache.topics[row]
                 }
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
