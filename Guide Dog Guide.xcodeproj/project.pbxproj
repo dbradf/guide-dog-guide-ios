@@ -432,7 +432,7 @@
 				DEVELOPMENT_TEAM = 6F3LUQ45KT;
 				INFOPLIST_FILE = "Guide Dog Guide/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dbradf.Guide-Dog-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dbradf.guide-dog-guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -445,7 +445,7 @@
 				DEVELOPMENT_TEAM = 6F3LUQ45KT;
 				INFOPLIST_FILE = "Guide Dog Guide/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.dbradf.Guide-Dog-Guide";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dbradf.guide-dog-guide";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
