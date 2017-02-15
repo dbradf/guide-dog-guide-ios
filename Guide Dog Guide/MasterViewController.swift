@@ -59,10 +59,13 @@ class MasterViewController: UITableViewController {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let controller = (segue.destination as! UINavigationController).topViewController as! DetailViewController
                 controller.detailItem = "Loading..."
+                controller.navigationItem.title = "Loading..."
                 if let cache = self.articleCache {
                     let row = indexPath.row
-                    controller.detailItem = cache.documents[row]
-                    controller.navigationItem.title = cache.topics[row]
+                    if (row < cache.documents.count) {
+                        controller.detailItem = cache.documents[row]
+                        controller.navigationItem.title = cache.topics[row]
+                    }
                 }
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
